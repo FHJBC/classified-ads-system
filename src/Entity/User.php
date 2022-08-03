@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -40,6 +42,16 @@ class User implements UserInterface
      * @ORM\Column(type="boolean")
      */
     private $isVerified = false;
+
+    /**
+     * @ORM\OneToMany(targetEntity=ClassifiedAd::class, mappedBy="user", orphanRemoval=true)
+     */
+    private $classifiedAds;
+
+    public function __construct()
+    {
+        $this->classifiedAds = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -130,6 +142,36 @@ class User implements UserInterface
     public function setIsVerified(bool $isVerified): self
     {
         $this->isVerified = $isVerified;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, ClassifiedAd>
+     */
+    public function getClassifiedAds(): Collection
+    {
+        return $this->classifiedAds;
+    }
+
+    public function addClassifiedAd(ClassifiedAd $classifiedAd): self
+    {
+        if (!$this->classifiedAds->contains($classifiedAd)) {
+            $this->classifiedAds[] = $classifiedAd;
+            $classifiedAd->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeClassifiedAd(ClassifiedAd $classifiedAd): self
+    {
+        if ($this->classifiedAds->removeElement($classifiedAd)) {
+            // set the owning side to null (unless already changed)
+            if ($classifiedAd->getUser() === $this) {
+                $classifiedAd->setUser(null);
+            }
+        }
 
         return $this;
     }
