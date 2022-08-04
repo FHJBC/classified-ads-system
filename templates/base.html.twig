@@ -1,19 +1,63 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+		{# Run `composer require symfony/webpack-encore-bundle`
+																																								           and uncomment the following Encore helpers to start using Symfony UX #}
+		{% block stylesheets %}
+			{#{{ encore_entry_link_tags('app') }}#}
+		{% endblock %}
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+		{% block javascripts %}
+			{#{{ encore_entry_script_tags('app') }}#}
+		{% endblock %}
+	</head>
+	<body>
+		<header
+			class="header" role="banner">
+			{# .top-bar #}
+			<div id="top-bar-primary" class="top-bar" role="navigation">
+				<div
+					class="row column expanded">
+					{# .primary-header-wrap #}
+					<div
+						class="primary-header-wrap">
+						{# site branding start #}
+						<div class="site-branding">
+							<a href="#" rel="home" class="custom-logo-link">
+								<img src="" width="128" height="128" alt=""/>
+							</a>
+							<span class="h1 site-title">
+								<a href="vidyvarotra" title="Vidy Varotra" rel="home">Vidy Varotra</a>
+							</span>
+							<p class="site-description">Le meilleur site des petites annonces en ligne</p>
+						</div>
+						{# site branding end #}
+						<nav class="top-bar-right">
+							<ul id="menu-top-bar" class="menu medium-horizontal vertical dropdown">
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8274" role="menuitem">
+									<a href="{{ path('app_create_classified_ad') }}">
+										<i class="fa fa-plus"></i>
+										Post an Ad
+									</a>
+								</li>
+								<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-8419 is-dropdown-submenu-parent opens-left">
+									<a href="#">
+										<img src="" alt="Avatar of the user" class="avatar avatar-30 photo img-circle" height="30" width="30" loading="lazy">
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					{# .primary-header-wrap #}
+				</div>
+			</div>
+			{# .top-bar #}
+		</header>
+		{% block body %}{% endblock %}
+	</body>
 </html>
