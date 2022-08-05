@@ -36,3 +36,8 @@ __$ yarn encore dev --watch__
 To create a production build:
 __$ yarn encore production__
 
+To install font-awesome:
+```bash
+$ yarn add font-awesome --dev
+```
+
