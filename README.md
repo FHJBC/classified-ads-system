@@ -36,5 +36,3 @@ __$ yarn encore dev --watch__
 To create a production build:
 __$ yarn encore production__
 
-After that, you can install bootstrap:
-__$ yarn add bootstrap --dev__
