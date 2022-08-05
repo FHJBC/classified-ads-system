@@ -8,12 +8,10 @@
 				Serasera Isan-karazany
 			{% endblock %}
 		</title>
-		{# Run `composer require symfony/webpack-encore-bundle`
-																																																																																																												           and uncomment the following Encore helpers to start using Symfony UX #}
 		{% block stylesheets %}
 			{{ encore_entry_link_tags('app') }}
 		{% endblock %}
-		<link rel="stylesheet" href="{{ asset('css/main.css') }}">
+		{# <link rel="stylesheet" href="{{ asset('css/main.css') }}"> #}
 	</head>
 	<body>
 		<header
@@ -26,172 +24,180 @@
 				</div>
 				<ul class="d-flex align-items-center justify-content-between w-25 px-lg-0 mb-0">
 					<li class="nav-item list-group-item">
-						<i class="fa fa-car"></i>
+						<i class="fa fa-plus"></i>
 
-						<a href="">Post an Ad</a>
+						<a class="btn-post-ad" href="">Post an Ad</a>
 					</li>
-					<li class="nav-item list-group-item dropdown d-flex align-items-center">
+					<li class="nav-item list-group-item dropdown dropdown-hover d-flex align-items-center">
 						<img src="{{ asset('build/images/mlltn.jpg') }}" alt="" class="avatar rounded-circle" width="30" height="30" style="object-fit: cover"/>
-
 						<a href="" class="nav-link dropdown-toggle" style="margin-left: 0.5rem">Username</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li class="list-group-item">
+								<a class="dropdown-item" href="#">
+									<i class="fa fa-list"></i>
+									Listings</a>
+							</li>
+							<li class="list-group-item">
+								<a class="dropdown-item" href="#">
+									<i class="fa fa-user"></i>
+									Edit profile</a>
+							</li>
+							<li class="list-group-item">
+								<a class="dropdown-item" href="#">
+									<i class="fa fa-sign-out"></i>
+									Logout</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</div>
-			{# .top-bar #}
+		</header>
+		{# .top-bar #}
 
-			{# .bottom-bar #}
-			<nav
-				class="navbar navbar-expand-lg navbar-light bg-danger">
-				<!-- container wrapper -->
+		{# .bottom-bar #}
+		<nav
+			class="navbar navbar-expand-lg navbar-light bg-danger">
+
+			{# container wrapper  #}
+			<div
+				class="container-fluid">
+				{# toggle button start  #}
+				<button class="navbar-toggler px-0" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarOnHover" aria-controls="#navbarOnHover" aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fas fa-bars"></i>
+				</button>
+				{# toggle button end  #}
+
+				{# collapsible wrapper start  #}
 				<div
-					class="container-fluid">
-					<!-- toggle button start -->
-					<button class="navbar-toggler px-0" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarOnHover" aria-controls="#navbarOnHover" aria-expanded="false" aria-label="Toggle navigation">
-						<i class="fas fa-bars"></i>
-					</button>
-					<!-- toggle button end -->
+					class="collapse navbar-collapse" id="navbarOnHover">
 
-					<!-- collapsible wrapper start -->
-					<div
-						class="collapse navbar-collapse" id="navbarOnHover">
-						<!-- left links start -->
-						<ul class="w-100 navbar-nav justify-content-center ps-lg-0" style="padding-left: 0.15rem">
-							<li class="nav-item">
-								<a class="nav-link" href="#">Home</a>
-							</li>
-							<!-- Navbar dropdown -->
-							<li class="nav-item dropdown dropdown-hover position-static">
-								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-									Categories
-								</a>
-								<!-- Dropdown menu -->
-								<div
-									class="dropdown-menu w-75 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0; border-top-right-radius: 0">
-									<!-- <div class=""> -->
-									<div
-										class="d-flex justify-content-between flex-wrap">
-										<!-- <div> -->
-										<ul class="list-group list-group-flush">
-											<li class="list-group-item d-flex align-items-center justify-content-between">
-												<a href="" class="list-group-item-action">Lorem ipsum</a>
-												<span class="ads-count">5</span>
-											</li>
-											<li class="list-group-item d-flex align-items-center justify-content-between">
-												<a href="" class="list-group-item-action">Dolor sit</a>
-												<span class="ads-count">5</span>
-											</li>
-											<li class="list-group-item d-flex align-items-center justify-content-between">
-												<a href="" class="list-group-item-action">Amet consectetur</a>
-												<span class="ads-count">5</span>
-											</li>
-											<li class="list-group-item d-flex align-items-center justify-content-between">
-												<a href="" class="list-group-item-action">Cras justo odio</a>
-												<span class="ads-count">4</span>
-											</li>
-											<li class="list-group-item d-flex align-items-center justify-content-between">
-												<a href="" class="list-group-item-action">Adipisicing elit</a>
-												<span class="ads-count">4</span>
-											</li>
-										</ul>
-										<!-- </div> -->
-										<!-- <div> -->
-										<ul class="list-group list-group-flush d-flex flex-column gy-2">
-											<li class="list-group-item d-flex align-items-center justify-content-between">
-												<a href="" class="list-group-item-action">Explicabo voluptas</a>
-												<span class="ads-count">10</span>
-											</li>
-											<li class="list-group-item d-flex align-items-center justify-content-between">
-												<a href="" class="list-group-item-action">Perspiciatis quo</a>
-												<span class="ads-count">10</span>
-											</li>
-											<li class="list-group-item d-flex align-items-center justify-content-between">
-												<a href="" class="list-group-item-action">Cras justo odio</a>
-												<span class="ads-count">10</span>
-											</li>
-											<li class="list-group-item d-flex align-items-center justify-content-between">
-												<a href="" class="list-group-item-action">Laudantium maiores</a>
-												<span class="ads-count">10</span>
-											</li>
-											<li class="list-group-item d-flex align-items-center justify-content-between">
-												<a href="" class="list-group-item-action">Provident dolor</a>
-												<span class="ads-count">10</span>
-											</li>
-										</ul>
-										<!-- </div> -->
-										<!-- <div> -->
-										<ul class="list-group list-group-flush">
-											<li class="list-group-item d-flex align-items-center justify-content-between">
-												<a href="list-group-item-action" class="">Iste quaerato</a>
-												<span class="ads-count">9</span>
-											</li>
-											<li class="list-group-item d-flex align-items-center justify-content-between">
-												<a href="list-group-item-action" class="">Cras justo odio</a>
-												<span class="ads-count">10</span>
-											</li>
-											<li class="list-group-item d-flex align-items-center justify-content-between">
-												<a href="list-group-item-action" class="">Est iure</a>
-												<span class="ads-count">9</span>
-											</li>
-											<li class="list-group-item d-flex align-items-center justify-content-between">
-												<a href="" class="list-group-item-action">Praesentium</a>
-												<span class="ads-count">20</span>
-											</li>
-											<li class="list-group-item d-flex align-items-center justify-content-between">
-												<a href="" class="list-group-item-action">Laboriosam</a>
-												<span class="ads-count">12</span>
-											</li>
-										</ul>
-										<!-- </div> -->
-									</div>
-									<!-- </div> -->
+					{# left links start  #}
+					<ul class="w-100 navbar-nav justify-content-center ps-lg-0" style="padding-left: 0.15rem">
+						<li class="nav-item">
+							<a class="nav-link" href="#">Home</a>
+						</li>
+
+						{# Navbar dropdown  #}
+						<li class="nav-item dropdown dropdown-hover position-static">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+								Categories
+							</a>
+							{# Dropdown menu  #}
+							<div class="dropdown-menu w-75 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0; border-top-right-radius: 0">
+
+								<div class="d-flex justify-content-between flex-wrap">
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item d-flex align-items-center justify-content-between">
+											<a href="" class="list-group-item-action">Lorem ipsum</a>
+											<span class="ads-count">5</span>
+										</li>
+										<li class="list-group-item d-flex align-items-center justify-content-between">
+											<a href="" class="list-group-item-action">Dolor sit</a>
+											<span class="ads-count">5</span>
+										</li>
+										<li class="list-group-item d-flex align-items-center justify-content-between">
+											<a href="" class="list-group-item-action">Amet consectetur</a>
+											<span class="ads-count">5</span>
+										</li>
+										<li class="list-group-item d-flex align-items-center justify-content-between">
+											<a href="" class="list-group-item-action">Cras justo odio</a>
+											<span class="ads-count">4</span>
+										</li>
+										<li class="list-group-item d-flex align-items-center justify-content-between">
+											<a href="" class="list-group-item-action">Adipisicing elit</a>
+											<span class="ads-count">4</span>
+										</li>
+									</ul>
+									<ul class="list-group list-group-flush d-flex flex-column gy-2">
+										<li class="list-group-item d-flex align-items-center justify-content-between">
+											<a href="" class="list-group-item-action">Explicabo voluptas</a>
+											<span class="ads-count">10</span>
+										</li>
+										<li class="list-group-item d-flex align-items-center justify-content-between">
+											<a href="" class="list-group-item-action">Perspiciatis quo</a>
+											<span class="ads-count">10</span>
+										</li>
+										<li class="list-group-item d-flex align-items-center justify-content-between">
+											<a href="" class="list-group-item-action">Cras justo odio</a>
+											<span class="ads-count">10</span>
+										</li>
+										<li class="list-group-item d-flex align-items-center justify-content-between">
+											<a href="" class="list-group-item-action">Laudantium maiores</a>
+											<span class="ads-count">10</span>
+										</li>
+										<li class="list-group-item d-flex align-items-center justify-content-between">
+											<a href="" class="list-group-item-action">Provident dolor</a>
+											<span class="ads-count">10</span>
+										</li>
+									</ul>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item d-flex align-items-center justify-content-between">
+											<a href="list-group-item-action" class="">Iste quaerato</a>
+											<span class="ads-count">9</span>
+										</li>
+										<li class="list-group-item d-flex align-items-center justify-content-between">
+											<a href="list-group-item-action" class="">Cras justo odio</a>
+											<span class="ads-count">10</span>
+										</li>
+										<li class="list-group-item d-flex align-items-center justify-content-between">
+											<a href="list-group-item-action" class="">Est iure</a>
+											<span class="ads-count">9</span>
+										</li>
+										<li class="list-group-item d-flex align-items-center justify-content-between">
+											<a href="" class="list-group-item-action">Praesentium</a>
+											<span class="ads-count">20</span>
+										</li>
+										<li class="list-group-item d-flex align-items-center justify-content-between">
+											<a href="" class="list-group-item-action">Laboriosam</a>
+											<span class="ads-count">12</span>
+										</li>
+									</ul>
 								</div>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Blog</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Purchase Membership</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-									Help
-								</a>
-								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<li>
-										<a class="dropdown-item" href="#">FAQ</a>
-									</li>
-									<li>
-										<a class="dropdown-item" href="#">Getting Started</a>
-									</li>
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">About</a>
-								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<li>
-										<a class="dropdown-item" href="#">Contact</a>
-									</li>
-									<li>
-										<a class="dropdown-item" href="#">Careers</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-						<!-- left links end -->
-					</div>
-					<!-- collapsible wrapper end -->
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Blog</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="#">Purchase Membership</a>
+						</li>
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Help
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<li>
+									<a class="dropdown-item" href="#">FAQ</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#">Getting Started</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">About</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<li>
+									<a class="dropdown-item" href="#">Contact</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#">Careers</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					{# left links end  #}
 				</div>
-				<!-- container wrapper end -->
-			</nav>
-
-			{# .bottom-bar #}
-		</header>
-
-
+				{# collapsible wrapper end  #}
+			</div>
+			{# container wrapper end  #}
+		</nav>
+		{# .bottom-bar #}
 		{% block body %}{% endblock %}
 		{% block javascripts %}
 			{{ encore_entry_script_tags('app') }}
 		{% endblock %}
-
 	</body>
 </html>
