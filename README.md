@@ -1,5 +1,5 @@
 To create a new symfony project:
-__$ symfony new <project-name> --version=<specific-symfony-version-number> --webapp__
+__$ symfony new \<project-name\> --version=\<specific-symfony-version-number\> --webapp__
 
 1. symfony console make:controller HomeController
 2. symfony console doctrine:database:create
@@ -13,10 +13,11 @@ To set up registration and authentication feature:
 2. symfony console make:registration-form
 
 
-#### To install and configure Webpack Encore 
+#### To install and configure Bootstrap CSS Framework with Webpack Encore 
 ```bash
 composer require encore
 yarn install
+yarn add bootstrap
 yarn add node-sass sass-loader --dev
 yarn add postcss-loader autoprefixer --dev
 ```
