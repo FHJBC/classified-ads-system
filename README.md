@@ -1,6 +1,6 @@
 To create a new symfony project:
 ```bash
-$ symfony new \<project-name\> --version=\<specific-symfony-version-number\> --webapp
+$ symfony new <project-name> --version=<specific-symfony-version-number> --webapp
 ```
 
 1. symfony console make:controller HomeController
