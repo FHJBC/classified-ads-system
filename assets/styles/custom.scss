@@ -1,0 +1,43 @@
+/* .top-bar */
+.nav-item {
+    .fa .fa-plus {
+        color: #8A8A8A;
+    }
+
+    .btn-post-ad {
+        text-decoration: none;
+        color: #8A8A8A;
+    }
+}
+
+.dropdown-hover:hover>.dropdown-menu {
+    display: inline-block;
+}
+
+.dropdown-hover>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+
+.list-group {
+    .list-group-item {
+        padding: 5px 0px !important;
+        width: 250px;
+    }
+
+    .list-group-item-action {
+        width: unset !important;
+    }
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white;
+}
+
+.ads-count {
+    background-color: gray;
+    padding: 2px 8px;
+    border-radius: 8px;
+}
+
+/* .top-bar */
