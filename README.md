@@ -17,14 +17,21 @@ To set up registration and authentication feature:
 ```bash
 composer require encore
 yarn install
-yarn encore dev-server
+yarn add node-sass sass-loader --dev
+yarn add postcss-loader autoprefixer --dev
 ```
+1. Change the css extension of *assets/styles/app.css* into *app.scss*
+2. Update the import in **assets/app.js** from *'./styles/app.css'* to *'./styles/app.scss'*
+3. Enable Sass/SCSS support in **webpack.config.js**
 
 To compile assets once:
-__$ yarn encore dev__
+__$ yarn encore dev__ or __$ yarn encore dev-server__
 
 To recompile assets automatically when files change:
 __$ yarn encore dev --watch__
 
 To create a production build:
 __$ yarn encore production__
+
+After that, you can install bootstrap:
+__$ yarn add bootstrap --dev__
