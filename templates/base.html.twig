@@ -2,62 +2,195 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>
-			{% block title %}Welcome!
+			{% block title %}
+				Serasera Isan-karazany
 			{% endblock %}
 		</title>
 		{# Run `composer require symfony/webpack-encore-bundle`
-																																								           and uncomment the following Encore helpers to start using Symfony UX #}
+																																																																																																           and uncomment the following Encore helpers to start using Symfony UX #}
 		{% block stylesheets %}
-			{#{{ encore_entry_link_tags('app') }}#}
+			{{ encore_entry_link_tags('app') }}
 		{% endblock %}
-
-		{% block javascripts %}
-			{#{{ encore_entry_script_tags('app') }}#}
-		{% endblock %}
+		<link rel="stylesheet" href="{{ asset('css/main.css') }}">
 	</head>
 	<body>
 		<header
 			class="header" role="banner">
 			{# .top-bar #}
-			<div id="top-bar-primary" class="top-bar" role="navigation">
-				<div
-					class="row column expanded">
-					{# .primary-header-wrap #}
-					<div
-						class="primary-header-wrap">
-						{# site branding start #}
-						<div class="site-branding">
-							<a href="#" rel="home" class="custom-logo-link">
-								<img src="" width="128" height="128" alt=""/>
-							</a>
-							<span class="h1 site-title">
-								<a href="vidyvarotra" title="Vidy Varotra" rel="home">Vidy Varotra</a>
-							</span>
-							<p class="site-description">Le meilleur site des petites annonces en ligne</p>
-						</div>
-						{# site branding end #}
-						<nav class="top-bar-right">
-							<ul id="menu-top-bar" class="menu medium-horizontal vertical dropdown">
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8274" role="menuitem">
-									<a href="{{ path('app_create_classified_ad') }}">
-										<i class="fa fa-plus"></i>
-										Post an Ad
-									</a>
-								</li>
-								<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-8419 is-dropdown-submenu-parent opens-left">
-									<a href="#">
-										<img src="" alt="Avatar of the user" class="avatar avatar-30 photo img-circle" height="30" width="30" loading="lazy">
-									</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
-					{# .primary-header-wrap #}
+			<div class="d-flex justify-content-between px-4">
+				<div class="site-info">
+					<a href="" class="navbar-brand site-logo" style="font-family: Operator Mono XLight; font-style: italic">Sera2</a>
+					<p class="site-description">Serasera maika isan-karazany</p>
 				</div>
+				<ul class="d-flex align-items-center justify-content-between w-25 px-lg-0 mb-0">
+					<li class="nav-item list-group-item">
+						<a href="">
+							<i class="fas fa-plus"></i>
+							Post an Ad</a>
+					</li>
+					<li class="nav-item list-group-item dropdown d-flex align-items-center">
+						<img src="img/mlltn.jpg" alt="" class="avatar rounded-circle" width="30" height="30" style="object-fit: cover"/>
+						<a href="" class="nav-link dropdown-toggle" style="margin-left: 0.5rem">Username</a>
+					</li>
+				</ul>
 			</div>
 			{# .top-bar #}
+
+			{# .bottom-bar #}
+			<nav
+				class="navbar navbar-expand-lg navbar-light bg-danger">
+				<!-- container wrapper -->
+				<div
+					class="container-fluid">
+					<!-- toggle button start -->
+					<button class="navbar-toggler px-0" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarOnHover" aria-controls="#navbarOnHover" aria-expanded="false" aria-label="Toggle navigation">
+						<i class="fas fa-bars"></i>
+					</button>
+					<!-- toggle button end -->
+
+					<!-- collapsible wrapper start -->
+					<div
+						class="collapse navbar-collapse" id="navbarOnHover">
+						<!-- left links start -->
+						<ul class="w-100 navbar-nav justify-content-center ps-lg-0" style="padding-left: 0.15rem">
+							<li class="nav-item">
+								<a class="nav-link" href="#">Home</a>
+							</li>
+							<!-- Navbar dropdown -->
+							<li class="nav-item dropdown dropdown-hover position-static">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+									Categories
+								</a>
+								<!-- Dropdown menu -->
+								<div
+									class="dropdown-menu w-75 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0; border-top-right-radius: 0">
+									<!-- <div class=""> -->
+									<div
+										class="d-flex justify-content-between flex-wrap">
+										<!-- <div> -->
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item d-flex align-items-center justify-content-between">
+												<a href="" class="list-group-item-action">Lorem ipsum</a>
+												<span class="ads-count">5</span>
+											</li>
+											<li class="list-group-item d-flex align-items-center justify-content-between">
+												<a href="" class="list-group-item-action">Dolor sit</a>
+												<span class="ads-count">5</span>
+											</li>
+											<li class="list-group-item d-flex align-items-center justify-content-between">
+												<a href="" class="list-group-item-action">Amet consectetur</a>
+												<span class="ads-count">5</span>
+											</li>
+											<li class="list-group-item d-flex align-items-center justify-content-between">
+												<a href="" class="list-group-item-action">Cras justo odio</a>
+												<span class="ads-count">4</span>
+											</li>
+											<li class="list-group-item d-flex align-items-center justify-content-between">
+												<a href="" class="list-group-item-action">Adipisicing elit</a>
+												<span class="ads-count">4</span>
+											</li>
+										</ul>
+										<!-- </div> -->
+										<!-- <div> -->
+										<ul class="list-group list-group-flush d-flex flex-column gy-2">
+											<li class="list-group-item d-flex align-items-center justify-content-between">
+												<a href="" class="list-group-item-action">Explicabo voluptas</a>
+												<span class="ads-count">10</span>
+											</li>
+											<li class="list-group-item d-flex align-items-center justify-content-between">
+												<a href="" class="list-group-item-action">Perspiciatis quo</a>
+												<span class="ads-count">10</span>
+											</li>
+											<li class="list-group-item d-flex align-items-center justify-content-between">
+												<a href="" class="list-group-item-action">Cras justo odio</a>
+												<span class="ads-count">10</span>
+											</li>
+											<li class="list-group-item d-flex align-items-center justify-content-between">
+												<a href="" class="list-group-item-action">Laudantium maiores</a>
+												<span class="ads-count">10</span>
+											</li>
+											<li class="list-group-item d-flex align-items-center justify-content-between">
+												<a href="" class="list-group-item-action">Provident dolor</a>
+												<span class="ads-count">10</span>
+											</li>
+										</ul>
+										<!-- </div> -->
+										<!-- <div> -->
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item d-flex align-items-center justify-content-between">
+												<a href="list-group-item-action" class="">Iste quaerato</a>
+												<span class="ads-count">9</span>
+											</li>
+											<li class="list-group-item d-flex align-items-center justify-content-between">
+												<a href="list-group-item-action" class="">Cras justo odio</a>
+												<span class="ads-count">10</span>
+											</li>
+											<li class="list-group-item d-flex align-items-center justify-content-between">
+												<a href="list-group-item-action" class="">Est iure</a>
+												<span class="ads-count">9</span>
+											</li>
+											<li class="list-group-item d-flex align-items-center justify-content-between">
+												<a href="" class="list-group-item-action">Praesentium</a>
+												<span class="ads-count">20</span>
+											</li>
+											<li class="list-group-item d-flex align-items-center justify-content-between">
+												<a href="" class="list-group-item-action">Laboriosam</a>
+												<span class="ads-count">12</span>
+											</li>
+										</ul>
+										<!-- </div> -->
+									</div>
+									<!-- </div> -->
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Blog</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Purchase Membership</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Help
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<li>
+										<a class="dropdown-item" href="#">FAQ</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Getting Started</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">About</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<li>
+										<a class="dropdown-item" href="#">Contact</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Careers</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<!-- left links end -->
+					</div>
+					<!-- collapsible wrapper end -->
+				</div>
+				<!-- container wrapper end -->
+			</nav>
+
+			{# .bottom-bar #}
 		</header>
+
+
 		{% block body %}{% endblock %}
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+
 	</body>
 </html>
