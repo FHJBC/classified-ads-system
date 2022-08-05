@@ -9,7 +9,7 @@
 			{% endblock %}
 		</title>
 		{# Run `composer require symfony/webpack-encore-bundle`
-																																																																																																           and uncomment the following Encore helpers to start using Symfony UX #}
+																																																																																																		           and uncomment the following Encore helpers to start using Symfony UX #}
 		{% block stylesheets %}
 			{{ encore_entry_link_tags('app') }}
 		{% endblock %}
@@ -31,7 +31,8 @@
 							Post an Ad</a>
 					</li>
 					<li class="nav-item list-group-item dropdown d-flex align-items-center">
-						<img src="img/mlltn.jpg" alt="" class="avatar rounded-circle" width="30" height="30" style="object-fit: cover"/>
+						<img src="{{ asset('build/images/mlltn.jpg') }}" alt="" class="avatar rounded-circle" width="30" height="30" style="object-fit: cover"/>
+
 						<a href="" class="nav-link dropdown-toggle" style="margin-left: 0.5rem">Username</a>
 					</li>
 				</ul>

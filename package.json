@@ -6,6 +6,7 @@
         "autoprefixer": "^10.4.8",
         "bootstrap": "^5.2.0",
         "core-js": "^3.0.0",
+        "file-loader": "^6.0.0",
         "node-sass": "^7.0.1",
         "postcss-loader": "^7.0.1",
         "regenerator-runtime": "^0.13.2",
