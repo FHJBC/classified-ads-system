@@ -1,5 +1,7 @@
 To create a new symfony project:
-__$ symfony new \<project-name\> --version=\<specific-symfony-version-number\> --webapp__
+```bash
+$ symfony new \<project-name\> --version=\<specific-symfony-version-number\> --webapp
+```
 
 1. symfony console make:controller HomeController
 2. symfony console doctrine:database:create
@@ -15,11 +17,11 @@ To set up registration and authentication feature:
 
 #### To install and configure Bootstrap CSS Framework with Webpack Encore 
 ```bash
-composer require encore
-yarn install
-yarn add bootstrap
-yarn add node-sass sass-loader --dev
-yarn add postcss-loader autoprefixer --dev
+$ composer require encore
+$ yarn install
+$ yarn add bootstrap
+$ yarn add node-sass sass-loader --dev
+$ yarn add postcss-loader autoprefixer --dev
 ```
 1. Change the css extension of *assets/styles/app.css* into *app.scss*
 2. Update the import in **assets/app.js** from *'./styles/app.css'* to *'./styles/app.scss'*
