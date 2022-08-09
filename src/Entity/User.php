@@ -48,6 +48,21 @@ class User implements UserInterface
      */
     private $classifiedAds;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $username;
+
+    /**
+     * @ORM\Column(type="string", length=20)
+     */
+    private $phoneNumber;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $avatar;
+
     public function __construct()
     {
         $this->classifiedAds = new ArrayCollection();
@@ -172,6 +187,37 @@ class User implements UserInterface
                 $classifiedAd->setUser(null);
             }
         }
+
+        return $this;
+    }
+
+    public function setUsername(string $username): self
+    {
+        $this->username = $username;
+
+        return $this;
+    }
+
+    public function getPhoneNumber(): ?string
+    {
+        return $this->phoneNumber;
+    }
+
+    public function setPhoneNumber(string $phoneNumber): self
+    {
+        $this->phoneNumber = $phoneNumber;
+
+        return $this;
+    }
+
+    public function getAvatar(): ?string
+    {
+        return $this->avatar;
+    }
+
+    public function setAvatar(?string $avatar): self
+    {
+        $this->avatar = $avatar;
 
         return $this;
     }
