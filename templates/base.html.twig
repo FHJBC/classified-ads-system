@@ -3,9 +3,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Plateforme dédiée pour les petites annonces dans la ville d'Antananarivo Madagascar.">
 		<title>
 			{% block title %}
-				Serasera Isan-karazany
+				Sera² sy Varotra Isan-karazany
 			{% endblock %}
 		</title>
 		{% block stylesheets %}
@@ -17,14 +18,15 @@
 
 		<div class="d-flex justify-content-between px-4">
 			<div class="site-info">
-				<a href="" class="navbar-brand site-logo" style="font-family: Operator Mono XLight; font-style: italic">Sera2</a>
-				<p class="site-description">Serasera maika isan-karazany</p>
+				<a href="" class="navbar-brand site-logo" style="font-family: Operator Mono XLight; font-style: italic">Sera²</a>
+				<p class="site-description">Sera² maika isan-karazany</p>
 			</div>
 			<div class="d-flex align-items-center justify-content-end w-25 px-lg-0 mb-0">
 				<div class="me-4">
-					<a href="#">
+					<a class="text-decoration-none text-info" href="#">
 						<i class="fa fa-plus"></i>
-						Post an Ad</a>
+						Post an Ad
+					</a>
 				</div>
 				<div class="dropdown dropdown-hover d-flex align-items-center">
 					<img src="{{ asset('build/images/mlltn.jpg') }}" alt="" class="avatar rounded-circle" width="30" height="30" style="object-fit: cover"/>
@@ -327,12 +329,8 @@
 			</div>
 			<!-- container wrapper end -->
 		</nav>
-		<section id="banner" class="d-flex align-items-center justify-content-center position-relative" style="
-																																																							background: url('{{ asset('build/images/marketing-digital.jpg') }}') no-repeat;
-																																																							background-position: center;
-																																																							background-size: cover;
-																																																							height: 70vh;
-																																																							">
+		<section id="banner" class="d-flex align-items-center justify-content-center position-relative" style="background-image: url('{{ asset('build/images/marketing-digital.jpg') }}');">
+
 			<div class="overlay"></div>
 			<div class="banner-container d-flex flex-column align-items-center">
 				<h1 class="banner-title fw-bold text-white">
@@ -340,7 +338,7 @@
 				</h1>
 				<p class="banner-desc text-white text-center w-75 mb-4">
 					Peaple use Sera2 to create amazing classified listing sites to help
-																																																																																													          visitors find what they are searching for.
+																																																																																																																																																				          visitors find what they are searching for.
 				</p>
 				<div class="banner-form-wrapper p-4" style="background-color: rgb(79, 76, 76, 0.5)">
 					<form class="banner-form d-grid" action="#" method="post">
