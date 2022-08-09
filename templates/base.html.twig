@@ -14,155 +14,288 @@
 		{# <link rel="stylesheet" href="{{ asset('css/main.css') }}"> #}
 	</head>
 	<body>
-		<header
-			class="header" role="banner">
-			{# .top-bar #}
-			<div class="d-flex justify-content-between px-4">
-				<div class="site-info">
-					<a href="" class="navbar-brand site-logo" style="font-family: Operator Mono XLight; font-style: italic">Sera2</a>
-					<p class="site-description">Serasera maika isan-karazany</p>
-				</div>
-				<ul class="d-flex align-items-center justify-content-between w-25 px-lg-0 mb-0">
-					<li class="nav-item list-group-item">
-						<i class="fa fa-plus"></i>
 
-						<a class="btn-post-ad" href="">Post an Ad</a>
-					</li>
-					<li class="nav-item list-group-item dropdown dropdown-hover d-flex align-items-center">
-						<img src="{{ asset('build/images/mlltn.jpg') }}" alt="" class="avatar rounded-circle" width="30" height="30" style="object-fit: cover"/>
-						<a href="" class="nav-link dropdown-toggle" style="margin-left: 0.5rem">Username</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li class="list-group-item">
-								<a class="dropdown-item" href="#">
-									<i class="fa fa-list"></i>
-									Listings</a>
-							</li>
-							<li class="list-group-item">
-								<a class="dropdown-item" href="#">
-									<i class="fa fa-user"></i>
-									Edit profile</a>
-							</li>
-							<li class="list-group-item">
-								<a class="dropdown-item" href="#">
-									<i class="fa fa-sign-out"></i>
-									Logout</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
+		<div class="d-flex justify-content-between px-4">
+			<div class="site-info">
+				<a href="" class="navbar-brand site-logo" style="font-family: Operator Mono XLight; font-style: italic">Sera2</a>
+				<p class="site-description">Serasera maika isan-karazany</p>
 			</div>
-		</header>
-		{# .top-bar #}
+			<div class="d-flex align-items-center justify-content-end w-25 px-lg-0 mb-0">
+				<div class="me-4">
+					<a href="#">
+						<i class="fa fa-plus"></i>
+						Post an Ad</a>
+				</div>
+				<div class="dropdown dropdown-hover d-flex align-items-center">
+					<img src="{{ asset('build/images/mlltn.jpg') }}" alt="" class="avatar rounded-circle" width="30" height="30" style="object-fit: cover"/>
 
-		{# .bottom-bar #}
+					<a href="" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-left: 0.5rem">Username</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown" style="top: 30px; right: 0px">
+						<a class="dropdown-item" href="#">
+							<i class="fa fa-list"></i>
+							Listings</a>
+						<a class="dropdown-item" href="#">
+							<i class="fa fa-user"></i>
+							Edit profile</a>
+						<a class="dropdown-item" href="#">
+							<i class="fa fa-sign-out"></i>
+							Logout</a>
+					</div>
+				</div>
+			</div>
+		</div>
 		<nav
 			class="navbar navbar-expand-lg navbar-light bg-danger">
-
-			{# container wrapper  #}
+			<!-- container wrapper -->
 			<div
 				class="container-fluid">
-				{# toggle button start  #}
-				<button class="navbar-toggler px-0" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarOnHover" aria-controls="#navbarOnHover" aria-expanded="false" aria-label="Toggle navigation">
+				<!-- toggle button start -->
+				<button class="navbar-toggler px-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarOnHover" aria-controls="#navbarOnHover" aria-expanded="false" aria-label="Toggle navigation">
 					<i class="fas fa-bars"></i>
 				</button>
-				{# toggle button end  #}
+				<!-- toggle button end -->
 
-				{# collapsible wrapper start  #}
+				<!-- collapsible wrapper start -->
 				<div
 					class="collapse navbar-collapse" id="navbarOnHover">
-
-					{# left links start  #}
-					<ul class="w-100 navbar-nav justify-content-center ps-lg-0" style="padding-left: 0.15rem">
+					<!-- left links start -->
+					<ul class="w-100 navbar-nav" style="padding-left: 10rem">
 						<li class="nav-item">
 							<a class="nav-link" href="#">Home</a>
 						</li>
-
-						{# Navbar dropdown  #}
+						<!-- Navbar dropdown -->
 						<li class="nav-item dropdown dropdown-hover position-static">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+							<a class="nav-link dropdown-toggle d-flex align-items-center justify-content-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 								Categories
 							</a>
-							{# Dropdown menu  #}
+							<!-- Dropdown menu -->
 							<div class="dropdown-menu w-75 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0; border-top-right-radius: 0">
+								<div class="d-grid justify-content-between" style="grid-template-columns: 1fr 1fr 1fr; gap: 10px">
+									<div>
+										<strong class="dropdown-header">
+											Auto
+										</strong>
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Lorem ipsum
+											<span class="ads-count">5</span>
+										</a>
 
-								<div class="d-flex justify-content-between flex-wrap">
-									<ul class="list-group list-group-flush">
-										<li class="list-group-item d-flex align-items-center justify-content-between">
-											<a href="" class="list-group-item-action">Lorem ipsum</a>
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Dolor sit
 											<span class="ads-count">5</span>
-										</li>
-										<li class="list-group-item d-flex align-items-center justify-content-between">
-											<a href="" class="list-group-item-action">Dolor sit</a>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Amet consectetur
 											<span class="ads-count">5</span>
-										</li>
-										<li class="list-group-item d-flex align-items-center justify-content-between">
-											<a href="" class="list-group-item-action">Amet consectetur</a>
-											<span class="ads-count">5</span>
-										</li>
-										<li class="list-group-item d-flex align-items-center justify-content-between">
-											<a href="" class="list-group-item-action">Cras justo odio</a>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Cras justo odio
 											<span class="ads-count">4</span>
-										</li>
-										<li class="list-group-item d-flex align-items-center justify-content-between">
-											<a href="" class="list-group-item-action">Adipisicing elit</a>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Adipisicing elit
 											<span class="ads-count">4</span>
-										</li>
-									</ul>
-									<ul class="list-group list-group-flush d-flex flex-column gy-2">
-										<li class="list-group-item d-flex align-items-center justify-content-between">
-											<a href="" class="list-group-item-action">Explicabo voluptas</a>
+										</a>
+
+										<strong class="dropdown-header">
+											Computers
+										</strong>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Explicabo voluptas
 											<span class="ads-count">10</span>
-										</li>
-										<li class="list-group-item d-flex align-items-center justify-content-between">
-											<a href="" class="list-group-item-action">Perspiciatis quo</a>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Perspiciatis quo
 											<span class="ads-count">10</span>
-										</li>
-										<li class="list-group-item d-flex align-items-center justify-content-between">
-											<a href="" class="list-group-item-action">Cras justo odio</a>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Cras justo odio
 											<span class="ads-count">10</span>
-										</li>
-										<li class="list-group-item d-flex align-items-center justify-content-between">
-											<a href="" class="list-group-item-action">Laudantium maiores</a>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Laudantium maiores
 											<span class="ads-count">10</span>
-										</li>
-										<li class="list-group-item d-flex align-items-center justify-content-between">
-											<a href="" class="list-group-item-action">Provident dolor</a>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Provident dolor
 											<span class="ads-count">10</span>
-										</li>
-									</ul>
-									<ul class="list-group list-group-flush">
-										<li class="list-group-item d-flex align-items-center justify-content-between">
-											<a href="list-group-item-action" class="">Iste quaerato</a>
+										</a>
+
+										<strong class="dropdown-header">
+											Home
+										</strong>
+
+										<a href="#" class="dropdown-item d-flex justify-content-between align-items-center">Iste quaerato
 											<span class="ads-count">9</span>
-										</li>
-										<li class="list-group-item d-flex align-items-center justify-content-between">
-											<a href="list-group-item-action" class="">Cras justo odio</a>
-											<span class="ads-count">10</span>
-										</li>
-										<li class="list-group-item d-flex align-items-center justify-content-between">
-											<a href="list-group-item-action" class="">Est iure</a>
+										</a>
+
+										<a href="#" class="dropdown-item d-flex justify-content-between align-items-center">Cras justo odio
 											<span class="ads-count">9</span>
-										</li>
-										<li class="list-group-item d-flex align-items-center justify-content-between">
-											<a href="" class="list-group-item-action">Praesentium</a>
-											<span class="ads-count">20</span>
-										</li>
-										<li class="list-group-item d-flex align-items-center justify-content-between">
-											<a href="" class="list-group-item-action">Laboriosam</a>
-											<span class="ads-count">12</span>
-										</li>
-									</ul>
+										</a>
+
+										<a href="#" class="dropdown-item d-flex justify-content-between align-items-center">Est iure
+											<span class="ads-count">9</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Praesentium
+											<span class="ads-count">9</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Laboriosam
+											<span class="ads-count">9</span>
+										</a>
+									</div>
+									<div>
+										<strong class="dropdown-header">
+											Auto
+										</strong>
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Lorem ipsum
+											<span class="ads-count">5</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Dolor sit
+											<span class="ads-count">5</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Amet consectetur
+											<span class="ads-count">5</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Cras justo odio
+											<span class="ads-count">4</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Adipisicing elit
+											<span class="ads-count">4</span>
+										</a>
+
+										<strong class="dropdown-header">
+											Computers
+										</strong>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Explicabo voluptas
+											<span class="ads-count">10</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Perspiciatis quo
+											<span class="ads-count">10</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Cras justo odio
+											<span class="ads-count">10</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Laudantium maiores
+											<span class="ads-count">10</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Provident dolor
+											<span class="ads-count">10</span>
+										</a>
+
+										<strong class="dropdown-header">
+											Home
+										</strong>
+
+										<a href="#" class="dropdown-item d-flex justify-content-between align-items-center">Iste quaerato
+											<span class="ads-count">9</span>
+										</a>
+
+										<a href="#" class="dropdown-item d-flex justify-content-between align-items-center">Cras justo odio
+											<span class="ads-count">9</span>
+										</a>
+
+										<a href="#" class="dropdown-item d-flex justify-content-between align-items-center">Est iure
+											<span class="ads-count">9</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Praesentium
+											<span class="ads-count">9</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Laboriosam
+											<span class="ads-count">9</span>
+										</a>
+									</div>
+									<div>
+										<strong class="dropdown-header">
+											Auto
+										</strong>
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Lorem ipsum
+											<span class="ads-count">5</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Dolor sit
+											<span class="ads-count">5</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Amet consectetur
+											<span class="ads-count">5</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Cras justo odio
+											<span class="ads-count">4</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Adipisicing elit
+											<span class="ads-count">4</span>
+										</a>
+
+										<strong class="dropdown-header">
+											Computers
+										</strong>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Explicabo voluptas
+											<span class="ads-count">10</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Perspiciatis quo
+											<span class="ads-count">10</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Cras justo odio
+											<span class="ads-count">10</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Laudantium maiores
+											<span class="ads-count">10</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Provident dolor
+											<span class="ads-count">10</span>
+										</a>
+
+										<strong class="dropdown-header">
+											Home
+										</strong>
+
+										<a href="#" class="dropdown-item d-flex justify-content-between align-items-center">Iste quaerato
+											<span class="ads-count">9</span>
+										</a>
+
+										<a href="#" class="dropdown-item d-flex justify-content-between align-items-center">Cras justo odio
+											<span class="ads-count">9</span>
+										</a>
+
+										<a href="#" class="dropdown-item d-flex justify-content-between align-items-center">Est iure
+											<span class="ads-count">9</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Praesentium
+											<span class="ads-count">9</span>
+										</a>
+
+										<a href="" class="dropdown-item d-flex justify-content-between align-items-center">Laboriosam
+											<span class="ads-count">9</span>
+										</a>
+									</div>
 								</div>
-							</li>
+							</div>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">Blog</a>
 						</li>
-
 						<li class="nav-item">
 							<a class="nav-link" href="#">Purchase Membership</a>
 						</li>
-
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 								Help
@@ -177,7 +310,7 @@
 							</ul>
 						</li>
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">About</a>
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<li>
 									<a class="dropdown-item" href="#">Contact</a>
@@ -188,13 +321,71 @@
 							</ul>
 						</li>
 					</ul>
-					{# left links end  #}
+					<!-- left links end -->
 				</div>
-				{# collapsible wrapper end  #}
+				<!-- collapsible wrapper end -->
 			</div>
-			{# container wrapper end  #}
+			<!-- container wrapper end -->
 		</nav>
-		{# .bottom-bar #}
+		<section id="banner" class="d-flex align-items-center justify-content-center position-relative" style="
+																																																							background: url('{{ asset('build/images/marketing-digital.jpg') }}') no-repeat;
+																																																							background-position: center;
+																																																							background-size: cover;
+																																																							height: 70vh;
+																																																							">
+			<div class="overlay"></div>
+			<div class="banner-container d-flex flex-column align-items-center">
+				<h1 class="banner-title fw-bold text-white">
+					Search for... anything with Sera2!
+				</h1>
+				<p class="banner-desc text-white text-center w-75 mb-4">
+					Peaple use Sera2 to create amazing classified listing sites to help
+																																																																																													          visitors find what they are searching for.
+				</p>
+				<div class="banner-form-wrapper p-4" style="background-color: rgb(79, 76, 76, 0.5)">
+					<form class="banner-form d-grid" action="#" method="post">
+						<input class="form-input rounded-3 w-100" type="text" name="keyWord" id="keyWord" placeholder="What are you looking for?"/>
+						<input class="form-input rounded-3" type="text" name="location" id="location" placeholder="Location"/>
+						<select class="form-select rounded-3" name="category" id="category">
+							<option value="All">All Categories</option>
+							<optgroup label="Auto">
+								<option value="Boats">Boats</option>
+								<option value="Cars & Trucks">Cars & Trucks</option>
+								<option value="Motorcycles">Motorcycles</option>
+								<option value="Parts & Accessories">Parts & Accessories</option>
+								<option value="Powersports">Powersports</option>
+							</optgroup>
+							<optgroup label="Books">
+								<option value="Children">Children</option>
+								<option value="Cookbooks">Cookbooks</option>
+								<option value="Fiction">Fiction</option>
+								<option value="Textbooks">Textbooks</option>
+								<option value="Young Adults">Young Adults</option>
+							</optgroup>
+							<optgroup label="Camera & Photo">
+								<option value="Camcorders">Camcorders</option>
+								<option value="Camera Accessories">Camera Accessories</option>
+								<option value="Digital Cameras">Digital Cameras</option>
+								<option value="Lenses & Filters">Lenses & Filters</option>
+							</optgroup>
+							<optgroup label="Cell Phones">
+								<option value="Accessories">Accessories</option>
+								<option value="Bluetooth Accessories">Bluetooth Accessories</option>
+								<option value="PDAs & Smartphones">PDAs & Smartphones</option>
+								<option value="SIM Cards">SIM Cards</option>
+							</optgroup>
+
+						</select>
+						<button class="btn btn-danger text-uppercase" type="submit">
+							<i class="fa-solid fa-magnifying-glass"></i>
+							Search
+						</button>
+					</form>
+				</div>
+			</div>
+		</section>
+
+
 		{% block body %}{% endblock %}
 		{% block javascripts %}
 			{{ encore_entry_script_tags('app') }}
