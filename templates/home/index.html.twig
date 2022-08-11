@@ -5,6 +5,11 @@
 {% endblock %}
 
 {% block body %}
+
+	{{ include('partials/_topbar.html.twig') }}
+
+	{{ include('partials/_navbar.html.twig') }}
+
 	<section id="banner" class="d-flex align-items-center justify-content-center position-relative" style="background-image: url('{{ asset('build/images/marketing-digital.jpg') }}');">
 
 		<div class="overlay"></div>
