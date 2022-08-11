@@ -74,18 +74,21 @@
 						<i class="fa fa-lock"></i>
 					</span>
 				</div>
-				{{ form_widget(registrationForm.plainPassword, {'attr': { 'class': 'form-control', 'placeholder': 'Merci de saisir un mot de passe' }}) }}
+				{{ form_widget(registrationForm.plainPassword.first, {'attr': { 'class': 'form-control'}}) }}
 			</div>
 			<!-- form-group// -->
+
+			<!-- form-group end.// -->
 			<div class="form-group input-group">
 				<div class="input-group-prepend">
 					<span class="input-group-text">
 						<i class="fa fa-lock"></i>
 					</span>
 				</div>
-				{{ form_widget(registrationForm.plainPasswordConfirm, {'attr': { 'class': 'form-control', 'placeholder': 'Confirmez votre mot de passe' }}) }}
-
+				{{ form_widget(registrationForm.plainPassword.second, {'attr': { 'class': 'form-control'}}) }}
 			</div>
+			<!-- form-group// -->
+
 
 			{{ form_row(registrationForm.agreeTerms) }}
 
