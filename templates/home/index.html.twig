@@ -15,10 +15,11 @@
 		<div class="overlay"></div>
 		<div class="banner-container d-flex flex-column align-items-center">
 			<h1 class="banner-title fw-bold text-white">
-				Search for... anything with Sera2!
+				Recherchez...
+				<strong id="banner-title-slider"></strong>
 			</h1>
 			<p class="banner-desc text-white text-center w-75 mb-4">
-				Peaple use Sera2 to create amazing classified listing sites to help																																																																																																																																																				          visitors find what they are searching for.
+				Les gens utilisent Sera² pour publier de petites annonces diverses pour aider les visiteurs à trouver ce qu'ils recherchent.
 			</p>
 			<div class="banner-form-wrapper p-4" style="background-color: rgb(79, 76, 76, 0.5)">
 				<form class="banner-form d-grid" action="#" method="post">
@@ -63,4 +64,8 @@
 		</div>
 	</section>
 
+{% endblock %}
+
+{% block javascripts %}
+	{{ encore_entry_script_tags('home_index') }}
 {% endblock %}
